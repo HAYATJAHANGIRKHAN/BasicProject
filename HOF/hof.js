@@ -8,3 +8,14 @@ function powercube(powertw0,n){
 }
 
 console.log(powercube(powertw0,3));
+
+
+function sayHello(){
+    return function(){
+        console.log("Asalamulaikum Jaaniya")
+       
+    }
+}
+let guessValue= sayHello();
+console.log(guessValue);
+guessValue();

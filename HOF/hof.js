@@ -65,17 +65,28 @@
 
 
 let arr=[1,2,3,4,5,6];
- arr.forEach(function(element,index,arr){
-    console.log(element,index,arr);
- })
+//  arr.forEach(function(element,index,arr){
+//     console.log(element,index,arr);
+//  })
  
-let arr1=[7,8,9 ,10,11,12,13,14,15,16,17];
-arr1.forEach((element,index,arr1) =>{
-    console.log("=>",element,index,arr1)
+// let arr1=[7,8,9 ,10,11,12,13,14,15,16,17];
+// arr1.forEach((element,index,arr1) =>{
+//     console.log("=>",element,index,arr1)
  
-});
+// });
 
 const person=["hayat", "jahangir","khan","sulaiman"]
     person.forEach((el) => {
-        console.log(el.toUpperCase()); //
+        // console.log(el.toUpperCase()); // forEach with uppercase
+       
     })
+
+arr.map(function(element,index,arr){
+    console.log(element,index,arr); //Map
+
+} )
+
+person.map((el)=>
+{
+    console.log(el.toLocaleUpperCase()); //map with uppercase
+})

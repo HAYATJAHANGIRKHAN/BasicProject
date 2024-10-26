@@ -44,21 +44,38 @@
 // console.log(a(5)(6)(9));
 
 
-const myNumber= [1,2,3,4,5]
+// const myNumber= [1,2,3,4,5]
 
-const SumArray= arry => {
-    let total =0;
-    arry.forEach(function(element){
-        total += element
-    });
-    return total;
-}
+// const SumArray= arry => {
+//     let total =0;
+//     arry.forEach(function(element){
+//         total += element
+//     });
+//     return total;
+// }
 
-console.log(SumArray(myNumber));
+// console.log(SumArray(myNumber));
 
 
-function tricolbal(){
-    console.log("Asalamualaikum");
-}
-// setInterval(tricolbal,2000);
-setTimeout (tricolbal,5000);
+// function tricolbal(){
+//     console.log("Asalamualaikum");
+// }
+// // setInterval(tricolbal,2000);
+// setTimeout (tricolbal,5000);
+
+
+let arr=[1,2,3,4,5,6];
+ arr.forEach(function(element,index,arr){
+    console.log(element,index,arr);
+ })
+ 
+let arr1=[7,8,9 ,10,11,12,13,14,15,16,17];
+arr1.forEach((element,index,arr1) =>{
+    console.log("=>",element,index,arr1)
+ 
+});
+
+const person=["hayat", "jahangir","khan","sulaiman"]
+    person.forEach((el) => {
+        console.log(el.toUpperCase()); //
+    })

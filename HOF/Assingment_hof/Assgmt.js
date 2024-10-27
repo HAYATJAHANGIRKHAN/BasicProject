@@ -22,16 +22,33 @@
 // }, 1000);
 
 
-// Convert Store Inventory Prices to INR
-const storeInventory = {
-    "apple": 1,
-    "banana": 0.5,
-    "orange": 1.2
-};
+// // Convert Store Inventory Prices to INR
+// const storeInventory = {
+//     "apple": 1,
+//     "banana": 0.5,
+//     "orange": 1.2
+// };
 
-const exchangeRate = 80;
-const convertedPrices = Object.fromEntries(
-    Object.entries(storeInventory).map(([item, price]) => [item, price * exchangeRate])
-);
+// const exchangeRate = 80;
+// const convertedPrices = Object.fromEntries(
+//     Object.entries(storeInventory).map(([item, price]) => [item, price * exchangeRate])
+// );
 
-console.log("Prices in INR:", convertedPrices);
+
+
+// Filtering and Capitalizing Books Published After 2010
+
+const books = [
+    { title: "Book One", author: "john doe", year: 2008 },
+    { title: "Book Two", author: "jane doe", year: 2012 },
+    { title: "Book Three", author: "michael smith", year: 2015 }
+];
+
+const recentBooks = books
+    .filter(book => book.year > 2010)
+    .map(book => ({
+        ...book,
+        author: book.author.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ")
+    }));
+
+console.log("Books published after 2010:", recentBooks);

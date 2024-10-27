@@ -36,19 +36,32 @@
 
 
 
-// Filtering and Capitalizing Books Published After 2010
+// // Filtering and Capitalizing Books Published After 2010
 
-const books = [
-    { title: "Book One", author: "john doe", year: 2008 },
-    { title: "Book Two", author: "jane doe", year: 2012 },
-    { title: "Book Three", author: "michael smith", year: 2015 }
-];
+// const books = [
+//     { title: "Book One", author: "john doe", year: 2008 },
+//     { title: "Book Two", author: "jane doe", year: 2012 },
+//     { title: "Book Three", author: "michael smith", year: 2015 }
+// ];
 
-const recentBooks = books
-    .filter(book => book.year > 2010)
-    .map(book => ({
-        ...book,
-        author: book.author.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ")
-    }));
+// const recentBooks = books
+//     .filter(book => book.year > 2010)
+//     .map(book => ({
+//         ...book,
+//         author: book.author.split(" ").map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(" ")
+//     }));
 
-console.log("Books published after 2010:", recentBooks);
+// console.log("Books published after 2010:", recentBooks);
+
+
+// URL Validation
+function validateURL(url) {
+    const regex = /^(https?:\/\/[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=]+(\.[a-zA-Z]+)+)$/;
+    if (regex.test(url)) {
+        console.log("Valid URL");
+    } else {
+        console.log("Invalid URL");
+    }
+}
+
+validateURL("https://example.com");  // Replace with any URL to test

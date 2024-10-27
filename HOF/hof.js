@@ -81,12 +81,21 @@ const person=["hayat", "jahangir","khan","sulaiman"]
        
     })
 
-arr.map(function(element,index,arr){
-    console.log(element,index,arr); //Map
+// arr.map(function(element,index,arr){
+//     console.log(element,index,arr); //Map
 
-} )
+// } )
 
-person.map((el)=>
-{
-    console.log(el.toLocaleUpperCase()); //map with uppercase
-})
+// person.map((el)=>
+// {
+//     console.log(el.toLocaleUpperCase()); //map with uppercase
+// })
+
+const cartbill= [10,20,30,40,50,60,];
+const sumofcartbill= cartbill.reduce((prevous,current) => prevous+current,1)
+console.log(sumofcartbill);
+
+const gameScore=[10,20,30,40];
+//check if all values are numbers 
+const gameScoreCheck = gameScore.every((v) => typeof v==='number')
+console.log("check:", gameScoreCheck);

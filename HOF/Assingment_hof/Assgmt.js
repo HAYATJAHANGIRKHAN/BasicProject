@@ -54,14 +54,27 @@
 // console.log("Books published after 2010:", recentBooks);
 
 
-// URL Validation
-function validateURL(url) {
-    const regex = /^(https?:\/\/[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=]+(\.[a-zA-Z]+)+)$/;
+// // URL Validation
+// function validateURL(url) {
+//     const regex = /^(https?:\/\/[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=]+(\.[a-zA-Z]+)+)$/;
+//     if (regex.test(url)) {
+//         console.log("Valid URL");
+//     } else {
+//         console.log("Invalid URL");
+//     }
+// }
+
+// validateURL("https://example.com");  // Replace with any URL to test
+
+
+// LinkedIn Profile URL Validator
+function validateLinkedInProfile(url) {
+    const regex = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]{5,30}$/;
     if (regex.test(url)) {
-        console.log("Valid URL");
+        console.log("Valid LinkedIn Profile URL");
     } else {
-        console.log("Invalid URL");
+        console.log("Invalid LinkedIn Profile URL");
     }
 }
 
-validateURL("https://example.com");  // Replace with any URL to test
+validateLinkedInProfile("https://www.linkedin.com/in/Hayat_khan123"); // Replace with any URL to test  

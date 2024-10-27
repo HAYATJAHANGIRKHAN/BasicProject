@@ -98,4 +98,9 @@ console.log(sumofcartbill);
 const gameScore=[10,20,30,40];
 //check if all values are numbers 
 const gameScoreCheck = gameScore.every((v) => typeof v==='number')
-console.log("check:", gameScoreCheck);
+console.log("check:", gameScoreCheck);// answer is True if any string value is there than answer will be False
+
+
+//find 
+const above20= gameScore.find((score)=> score>20)
+console.log(above20)//30 it give a first number of that num 

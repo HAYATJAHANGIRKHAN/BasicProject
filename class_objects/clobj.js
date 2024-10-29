@@ -25,14 +25,14 @@
 class product{
 
 constructor(naam,price,rating){
-    console.log("calling current");
+    console.log("calling current",this);
     this.rating= rating;
 this.naam= naam;
 this.price= price;
 }
 
 display(){
-    console.log("display");
+    console.log("this refer to ",this);
 }
 }
 

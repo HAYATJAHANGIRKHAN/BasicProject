@@ -9,7 +9,7 @@
 //     this.name = name;
 //     this.price = price;
 //     this.rating = rating;
-
+        //   #rating
 // }
 
 // display(){
@@ -40,20 +40,16 @@
 //     console.log(hay)
 //     hay.display()
 
-// constructor in function
-function product(n,p,r){
-    this.name = n;
-    this.price = p;
-    this.rating = r;
-}
-const p= new product ("jaaniya",100000,5);
-console.log(p);
+// // constructor in function
+// function product(n,p,r){
+//     this.name = n;
+//     this.price = p;
+//     this.rating = r;
+// }
+// const p= new product ("jaaniya",100000,5);
+// console.log(p);
 
-
-
-
-
-
+// add # make a privite eg #price
 
     /**
      * 1. this keyword in js is different fromthan other languages.
@@ -64,3 +60,6 @@ console.log(p);
      -if u return  a custom obj ,then the custom obj is returned.
      - if u do not return anything , then object reffered by this is    returned.
      */
+
+     //getter and setter
+     

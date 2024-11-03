@@ -90,24 +90,24 @@
 //         console.error(error); // Agar reject hota hai toh yeh chalega
 //     });
 
-    const myPromise = new Promise (function (resolve,reject){
-        setTimeout(()=>{
-            let success= true;
-            if(success){
-                resolve("i am solved");
-            }else{
-                reject("i am rejected");
-            }
-        },5000)
-    })
+//     const myPromise = new Promise (function (resolve,reject){
+//         setTimeout(()=>{
+//             let success= true;
+//             if(success){
+//                 resolve("i am solved");
+//             }else{
+//                 reject("i am rejected");
+//             }
+//         },5000)
+//     })
 
-    myPromise
- .then((message)=>{
-    console.log(message);
- })
- .catch((error)=>{
-    console.log(error)
- })
+//     myPromise
+//  .then((message)=>{
+//     console.log(message);
+//  })
+//  .catch((error)=>{
+//     console.log(error)
+//  })
 
 
 
@@ -129,3 +129,15 @@
 //     .catch((error) => {
 //         console.error(error); // Agar reject hota hai toh yeh chalega
 //     });
+
+
+async function fetchData() {
+    let data = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data fetched!");
+        }, 2000);
+    });
+    console.log(data); // Output: Data fetched! (after 2 seconds)
+}
+
+fetchData();

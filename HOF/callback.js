@@ -71,21 +71,61 @@
 // }
 //  console.log(prom(true))
 
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        let success = true;      
-        if (success) {
-            resolve("Operation successful!");
-        } else {
-            reject("Operation failed.");
-        }
-    }, 2000);
-});
-// Promise ko consume karte hain
-myPromise
-    .then((message) => {
-        console.log(message); // Agar resolve hota hai toh yeh chalega
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let success = true;      
+//         if (success) {
+//             resolve("Operation successful!");
+//         } else {
+//             reject("Operation failed.");
+//         }
+//     }, 2000);
+// });
+// // Promise ko consume karte hain
+// myPromise
+//     .then((message) => {
+//         console.log(message); // Agar resolve hota hai toh yeh chalega
+//     })
+//     .catch((error) => {
+//         console.error(error); // Agar reject hota hai toh yeh chalega
+//     });
+
+    const myPromise = new Promise (function (resolve,reject){
+        setTimeout(()=>{
+            let success= true;
+            if(success){
+                resolve("i am solved");
+            }else{
+                reject("i am rejected");
+            }
+        },5000)
     })
-    .catch((error) => {
-        console.error(error); // Agar reject hota hai toh yeh chalega
-    });
+
+    myPromise
+ .then((message)=>{
+    console.log(message);
+ })
+ .catch((error)=>{
+    console.log(error)
+ })
+
+
+
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let success = true;      
+//         if (success) {
+//             resolve("Operation successful!");
+//         } else {
+//             reject("Operation failed.");
+//         }
+//     }, 2000);
+// });
+// // Promise ko consume karte hain
+// myPromise
+//     .then((message) => {
+//         console.log(message); // Agar resolve hota hai toh yeh chalega
+//     })
+//     .catch((error) => {
+//         console.error(error); // Agar reject hota hai toh yeh chalega
+//     });
